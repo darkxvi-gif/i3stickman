@@ -1,0 +1,46 @@
+STICKMAN CINEMA — the folder
+===========================
+
+TWO WAYS IN. Pick one, then use the player for both.
+
+A. WHAT IF CHANNEL  (titles -> scripts -> film)
+   1. Open WHAT-IF-NICHE-PROMPT.md, copy all of it, paste into DeepSeek, send.
+   2. It gives 35 numbered titles. Reply with the numbers you want:  1 2 4 12
+   3. It writes one short script per number (S1, S2, S4, S12).
+   4. Reply with the script number you want filmed:  2
+   5. It answers with the film block (STORY = {...}).
+   6. Paste that block into STICKMAN-PLAYER.html -> Build film.
+   7. For a longer film it sends PART blocks: paste each one with Add as part,
+      then press Copy state, send that line back, and say: continue.
+
+B. ANY OTHER STORY
+   1. Open DEEPSEEK-STICKMAN-KIT.md, copy all of it, paste into DeepSeek.
+   2. Add your story at the bottom (STORY TO ADAPT) and send.
+   3. It answers with STORY = {...} (or PART = {...}).
+   4. Same player, same buttons.
+
+THE PLAYER
+   Open STICKMAN-PLAYER.html in Chrome or Edge.
+   STORY CODE -> paste -> Build film (first block) or Add as part (next parts).
+   Copy state -> paste back to the AI -> continue.
+   ● Record -> film.webm
+   ffmpeg -i film.webm -c:v libx264 -crf 18 -pix_fmt yuv420p film.mp4
+
+IF A REPLY IS CUT OFF
+   Send: "Your reply was cut off. Do not restart. Continue the same part from the last
+   complete shot. Then give the STATUS line."
+   Never ask it to write the whole film again.
+
+IF THE PLAYER SHOWS AN ERROR
+   Copy the red error text back to the AI and ask it to fix only that shot.
+
+Numbers are stable: title 4 stays 4, script S4 stays S4, shot s4 stays s4.
+
+THE "OTHER" OPTION
+  Every list the AI gives you ends with: "reply with the numbers, or 'other' + what you want".
+  Type things like:
+    other: what if you never slept?
+    other: here is my own story ...
+    other: make it shorter / darker / at night
+    other: build a school instead of an office
+  The AI must accept "other" and change only that. If you type just "other", it asks one question.
